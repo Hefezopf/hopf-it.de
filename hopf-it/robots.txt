@@ -1,0 +1,10 @@
+# robots.txt zu http://www.hopf-it.de/
+
+# User-agent: UniservalRobot/1.0
+# User-agent: mein-Robot
+# Disallow: /quellen/dtd/
+# Allow: /quellen/dtd/index.html
+
+User-agent: *
+Disallow: /logs/
+

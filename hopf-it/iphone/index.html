@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Markus Hopf</title>
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+<link rel="apple-touch-icon" href="iui/iui-logo-touch-icon.png" />
+<meta name="apple-touch-fullscreen" content="YES" />
+<style type="text/css" media="screen">@import "iui/iuix.css";</style>
+<script type="application/x-javascript" src="iui/iuix.js"></script>
+<!--
+<script type="application/x-javascript" src="http://10.0.1.2:1840/ibug.js"></script>
+-->
+</head>
+
+<body>
+    <div class="toolbar">
+        <h1 id="pageTitle"></h1>
+        <a id="backButton" class="button" href="#"></a>
+        <a class="button" href="#searchForm">Search</a>
+    </div>
+    
+    <ul id="home" title="Hopf" selected="true">
+			<li><a href="MarkusHopf.html">Markus Hopf</a></li>
+			<li><a href="Services.html">Services</a></li>
+			<li><a href="program.html">Programmierung</a></li>
+			<li><a href="Abschluss.html">Abschl&uuml;sse</a></li>
+			<li><a href="Verfuegbarkeit.html">Verf&uuml;gbarkeit</a></li>
+	    <li><a href="Profil.html">Profil</a></li>
+	    <li><a href="Settings.html">Einstellungen</a></li>
+    </ul>  
+	
+    <form id="searchForm" class="dialog" action="search.php">
+        <fieldset>
+            <h1>Skill Suche</h1>
+
+            <a class="button leftButton" type="cancel">Abbruch</a>
+            <a class="button blueButton" type="submit">Suche</a>
+            
+            <label>Kategorie:</label>
+            <input id="artist" type="text" name="artist"/>
+            <label>Skill:</label>
+            <input type="text" name="song"/>
+        </fieldset>
+
+    </form>
+
+    <div id="settings" title="Einstellungen" class="panel">
+        <h2>Erweitert</h2>
+        <fieldset>
+            <div class="row" style="text-align: left;">
+                <label>Benutze Position</label>
+                <div class="toggle" onclick=""><span class="thumb"></span><span class="toggleOn">ON</span><span class="toggleOff">OFF</span></div>
+
+            </div>
+            <div class="row" style="text-align: left;">
+                <label>Erlaube Benachrichtigungen</label>
+                <div class="toggle" onclick="" toggled="true"><span class="thumb></span><span class="toggleOn">ON</span><span class="toggleOff">OFF</span></div>
+            </div>
+        </fieldset>
+        
+        <h2>User</h2>
+        <fieldset>
+            <div class="row" style="text-align: left;">
+                <label>Name</label>
+                <input type="text" name="userName" value="yourName"/>
+            </div>
+            <div class="row" style="text-align: left;">
+                <label>Passwort</label>
+                <input type="password" name="password" value="delicious"/>
+            </div>
+            <div class="row" style="text-align: left;">
+                <label>Confirm</label>
+                <input type="password" name="password" value="delicious"/>
+            </div>
+        </fieldset>
+    </div>
+</body>
+</html>

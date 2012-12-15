@@ -1,0 +1,595 @@
+<html>
+
+<head>
+<meta name="robots" content="index">
+<meta name="robots" content="follow">
+<meta name="page-type" content="Private Homepage">
+<meta name="expires" content="NEVER">
+<meta name="audience" content="Alle">
+<meta name="page-topic" content="Computer/Dienstleistungen">
+<meta name="description" content="Training und Consulting im Java/J2EE Umfeld. UML Modelierung und Architektur-Beratung. System- und Unternehmensberatung. www.hopf-it.de. Dipl.-Ing. Markus Hopf Technische Informatik (FH) ">
+<meta name="keywords" content="J2EE, UML, Trainer, Hopf, Markus, OOAD, Java, XML, XSLT, XSL, OO, JSP, Servlets, Programmierung, Dozent, Consulting, C++">
+<meta name="copyright" content="Markus Hopf">
+<meta name="publisher" content="Markus Hopf">
+<meta name="author" content="Markus Hopf">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="date" content="2002-11-02T08:49:37+00:00">
+
+<title>UNIX Commands</title>
+
+<style>
+<!--
+ /* Style Definitions */
+-->
+</style>
+
+</head>
+<h2>
+Unix Comands
+<br>
+--------------------
+</h2>
+<br>
+copy from remote to remote:
+<br>
+scp file root@10.150.70.37: 			// file will be copied into /root/file
+<br>
+scp file root@10.150.70.37:newFile   	// file will be copied into /root/newFile
+<br>
+
+<br>
+login from remote to remote:
+<br>
+ssh root@10.150.70.38
+<br>
+ssh hostname2
+<br>
+
+<br>
+rlogin sun195
+<br>
+
+<br>
+ip adress:
+<br>
+iFconfig | grep "inet addr"
+<br>
+
+<br>
+
+<br>
+Port usage:
+<br>
+netstat -peav | grep <portnum>
+<br>
+
+<br>
+++++++++++++++++++++
+<br>
++ find
+<br>
+++++++++++++++++++++
+<br>
+find . -type f -name "*.xml" | xargs grep -l Suchstring
+<br>
+find . -exec grep "searchtext" '{}' \; -print
+<br>
+find . -name file -exec grep "searchtext" '{}' \; -print
+<br>
+find . -name file -exec cp "{}" /test \;
+<br>
+find /etc -type d 2> /dev/null > ~/bin/file
+<br>
+find /usr -name file -exec rm {} \; &
+<br>
+find /usr -name file -exec ls -lisa {} \;
+<br>
+find . -atime 1 -exec ls -lisa {} \;   // all one day old files
+<br>
+find . -atime 1 -exec rm {} \;         // remove all one day old files
+<br>
+find . -empty -exec ls -lisa {} \;     // all empty files
+<br>
+find /usr -inode 4444
+<br>
+++++++++++++++++++++
+<br>
+
+<br>
+++++++++++++++++++++
+<br>
++ svn
+<br>
+++++++++++++++++++++
+<br>
+svn update
+<br>
+svn add *.jar
+<br>
+svn commit -m message
+<br>
+svn info
+<br>
+svn co –r 28177 <svn_url> RBtCore
+<br>
+++++++++++++++++++++
+<br>
+
+<br>
+++++++++++++++++++++
+<br>
++ VI
+<br>
+++++++++++++++++++++
+<br>
+search and replace all
+<br>
+:%s/searchtext/replacetext/g
+<br>
+
+<br>
+copy line
+<br>
+y
+<br>
+2yy
+<br>
+paste line
+<br>
+p
+<br>
+delete line
+<br>
+2dd
+<br>
+
+<br>
+goto line
+<br>
+:linenr
+<br>
+
+<br>
+goto end of file
+<br>
+(n)G
+<br>
+
+<br>
+move to next word
+<br>
+e
+<br>
+move to previous word
+<br>
+b
+<br>
+
+<br>
+++++++++++++++++++++
+<br>
+
+<br>
+++++++++++++++++++++
+<br>
++ ftp
+<br>
+++++++++++++++++++++
+<br>
+ftp planck-t
+<br>
+bin
+<br>
+get file
+<br>
+quit
+<br>
+++++++++++++++++++++
+<br>
+
+<br>
+
+<br>
+++++++++++++++++++++
+<br>
++ profile
+<br>
+++++++++++++++++++++
+<br>
+ls /etc/profile
+<br>
+
+<br>
+cygwin profile:
+<br>
+E:\cygwin\etc\profile
+<br>
+
+<br>
+vi .profile
+<br>
+export CLASSPATH=.:/export/home/.../My.jar
+<br>
+neu anmelden!
+<br>
+. .profile
+<br>
+. .kshrc
+<br>
+++++++++++++++++++++
+<br>
+
+<br>
+
+<br>
+vi /ect/profile
+<br>
+alias ll='ls -lisa'
+<br>
+alias home='cd;pwd'
+<br>
+unalias home
+<br>
+
+<br>
+
+<br>
+chown -R ect:ect /usr/tomcat/webapps
+<br>
+chown -R ect dir
+<br>
+chgrp -R ect dir
+<br>
+
+<br>
+uname -a
+<br>
+
+<br>
+dos2unix
+<br>
+
+<br>
+df -h
+<br>
+
+<br>
+./startServer.sh > /dev/null &
+<br>
+
+<br>
+free
+<br>
+
+<br>
+vmstat
+<br>
+
+<br>
+traceroute
+<br>
+
+<br>
+uptime
+<br>
+
+<br>
+rename.exe '01 - ' '' *.txt
+<br>
+
+<br>
+tail -f /usr/tomcat/logs/catalina.out
+<br>
+
+<br>
+ls --color=tty
+<br>
+
+<br>
+ps -aef | grep 'tomcat'
+<br>
+
+<br>
+
+<br>
+bash
+<br>
+ksh
+<br>
+
+<br>
+echo $CLASSPATH
+<br>
+
+<br>
+export VAR=$VAR:wert
+<br>
+
+<br>
+su - guest
+<br>
+
+<br>
+su
+<br>
+UNIXroot
+<br>
+
+<br>
+./j2ee
+<br>
+
+<br>
+su
+<br>
+root
+<br>
+crapS
+<br>
+
+<br>
+chmod -R 777
+<br>
+chmod 750 dir
+<br>
+chmod u-r file
+<br>
+chmod g+w file
+<br>
+chmod -R ug+rwX dir
+<br>
+
+<br>
+hostname
+<br>
+
+<br>
+mkdir ~/Textfiles
+<br>
+mkdir $HOME/dir
+<br>
+
+<br>
+rmdir
+<br>
+
+<br>
+mv file file2
+<br>
+rm -rf DIR
+<br>
+rm –Rf /usr/tomcat/work/Catalina/localhost/*
+<br>
+
+<br>
+tee file
+<br>
+tee -a file (Abbruch: control D)
+<br>
+
+<br>
+xhost slowakei
+<br>
+rlogin slowakei -l display
+<br>
+
+<br>
+anlegen
+<br>
+jar cvf test.jar dir
+<br>
+lesen
+<br>
+jar tvf test.jar
+<br>
+auspacken
+<br>
+jar xvf test.jar
+<br>
+
+<br>
+rcp file.jar hostname:/export/home/kurs
+<br>
+(Rechner muss in .xhosts eingetragen sein)
+<br>
+(evtl. als root kopieren)
+<br>
+
+<br>
+# neues Package installieren
+<br>
+su
+<br>
+UNIXroot
+<br>
+rm -rf j2se
+<br>
+cd /net/<Raumname>/export/Packages
+<br>
+pksadd -d . JDK130
+<br>
+pkgadd -d JDK131
+<br>
+
+<br>
+java -cp $CLASSPATH:/home/Client.jar Main
+<br>
+
+<br>
+man -s 4 passwd
+<br>
+man -k calendar
+<br>
+
+<br>
+ls -ltr  //time revers
+<br>
+ls -lisa //detailed infos
+<br>
+ls -F
+<br>
+ls /usr/bin/c*
+<br>
+ls -l *jar *tar
+<br>
+ls -i
+<br>
+ls -l | grep 'May  9'
+<br>
+ls [df]*
+<br>
+ls file?
+<br>
+
+<br>
+ln datei link
+<br>
+
+<br>
+cd ~  // root dir
+<br>
+cd -  // last dir
+<br>
+
+<br>
+who > datei
+<br>
+who >> datei
+<br>
+
+<br>
+who am i
+<br>
+
+<br>
+sort datei | lp
+<br>
+sort -rn +4 file
+<br>
+
+<br>
+
+<br>
+grep text /dir
+<br>
+grep -i ^[a-f] file | sort -b +1 -o file2
+<br>
+grep -c test test.log // line count
+<br>
+
+<br>
+fgrep -R 'localhost' *
+<br>
+
+<br>
+which cp
+<br>
+
+<br>
+jar cvf file dir
+<br>
+tar cvf file dir
+<br>
+zip -r file .
+<br>
+unzip file -d dir
+<br>
+compress file
+<br>
+uncompress file
+<br>
+
+<br>
+jobs
+<br>
+fg %1
+<br>
+^Z
+<br>
+bg %1
+<br>
+
+<br>
+pkill psname
+<br>
+
+<br>
+uname -n
+<br>
+
+<br>
+exit
+<br>
+
+<br>
+kill 1111
+<br>
+kill -9 1111
+<br>
+kill %1
+<br>
+
+<br>
+cat -v /dev/zero
+<br>
+
+<br>
+ps -ef
+<br>
+
+<br>
+sleep 100 &
+<br>
+
+<br>
+mt ret
+<br>
+
+<br>
+id -a
+<br>
+
+<br>
+lpstat -a
+<br>
+
+<br>
+lp file
+<br>
+
+<br>
+
+<br>
+history
+<br>
+r 1
+<br>
+
+<br>
+set -o vi
+<br>
+
+<br>
+env
+<br>
+
+<br>
+export PATH
+<br>
+
+<br>
+touch file
+<br>
+
+<br>
+disk usage:
+<br>
+du file
+<br>
+
+<br>
+apropos <cmd>
+<br>
+
+<br>
+</html>
