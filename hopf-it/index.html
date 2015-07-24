@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="css/screen.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="css/lightbox.css" type="text/css" media="screen" />
     <link href='http://fonts.googleapis.com/css?family=Fredoka+One|Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link href="css/polyglot-language-switcher.css" type="text/css" rel="stylesheet">
+ <!--   <link href="css/polyglot-language-switcher.css" type="text/css" rel="stylesheet">
 	<style>
 		#polyglotLanguageSwitcher a.active { 
 			background-color: #505050 !important;
@@ -43,7 +43,7 @@
 			height: 1.5em;
 		}		
 	</style>
-	
+	-->
 	<!-- Für Smartphones -->
 	<style>
 		@media only screen and (max-width: 400px) {
@@ -160,7 +160,7 @@
 
 <div id="sidebar">
 
-<!-- ausgeblendet:style="display:none" -->
+<!-- 
 <div style="display:none" id="polyglotLanguageSwitcher" >
 	<form action="#">
 			<select id="polyglot-language-options">
@@ -169,10 +169,11 @@
 			</select>
 	</form>
 </div>	
+-->
 
     <h1 class="logo"><a href="http://www.hopf-it.de">Hopf-<em>it</em>.de</a></h1>
-    <p class="author"><a href="http://www.hopf-it.de">by Markus Hopf</a><!-- &nbsp;<img src="images/flags/gb.png" alt="E"> --></p>
-	
+    <p class="author"><a href="http://www.hopf-it.de">by Markus Hopf</a>&nbsp;&nbsp;<a class="imgContain"><img id="flag_de" src="images/flags/de.png" alt="Deutsch">&nbsp;&nbsp;</a><a class="imgContain"><img id="flag_gb" src="images/flags/gb.png" alt="English"></a></p>
+
     <ul id="nav">
         <li><a href="#person" class="first">Person</a></li>
         <li><a href="#technologie" class="first" id="de_">Technologie</a></li>
@@ -2321,7 +2322,7 @@ Schemagen, checkstyle, findbugs, pmd, jVisualVM Profiler, Adobe LifeCycle Design
 <script src="js/jquery-ui-1.8.18.custom.min.js"></script>
 <script src="js/jquery.smooth-scroll.min.js"></script>
 <script src="js/lightbox.js"></script>
-
+<!--
 <script src="js/jquery.polyglot.language.switcher.js" type="text/javascript"></script>
 <script type="text/javascript">
 	$(document).ready(function() {
@@ -2345,31 +2346,43 @@ Schemagen, checkstyle, findbugs, pmd, jVisualVM Profiler, Adobe LifeCycle Design
 		});
 	});
 </script>
-	
+-->
+
+<script>	 
+     // Englisch geklickt
+	 $('.imgContain').on("click","a,img#flag_gb", function (e) {
+			// Flaggen
+			$("[id=flag_gb]").hide();
+			$("[id=flag_de]").show();
+			// Texte
+			$("[id=en_]").hide();
+			$("[id=de_]").show();
+	 });
+     // Deutsch geklickt
+	 $('.imgContain').on("click","a,img#flag_de", function (e) {
+	        // Flaggen
+			$("[id=flag_de]").hide();
+			$("[id=flag_gb]").show();
+			// Texte
+			$("[id=de_]").hide();
+			$("[id=en_]").show();
+	 });
+</script>
+ 
+
 <script>
-  jQuery(document).ready(function($) {
-      $('a').smoothScroll({
-        speed: 1000,
-        easing: 'easeInOutCubic'
-      });
-
-      $('.showOlderChanges').on('click', function(e){
-        $('.changelog .old').slideDown('slow');
-        $(this).fadeOut();
-        e.preventDefault();
-      })
-  });
-/*
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-2196019-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-*/
+	  jQuery(document).ready(function($) {
+	      $('a').smoothScroll({
+	        speed: 1000,
+	        easing: 'easeInOutCubic'
+	      });
+	
+	      $('.showOlderChanges').on('click', function(e){
+	        $('.changelog .old').slideDown('slow');
+	        $(this).fadeOut();
+	        e.preventDefault();
+	      })
+	  });
 </script>
 </body>
 </html>
