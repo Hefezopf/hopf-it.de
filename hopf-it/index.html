@@ -2354,6 +2354,14 @@ Schemagen, checkstyle, findbugs, pmd, jVisualVM Profiler, Adobe LifeCycle Design
 </script>
 -->
 
+<script>
+	$(document).ready(function() {
+	// Event wird beim erstmaligen laden ausgelöst
+	$("[id=en_]").hide();
+	$("[id=de_]").show();
+	});
+</script>
+
 <script>	 
      // Englisch geklickt
 	 $('.imgContain').on("click","a,img#flag_gb", function (e) {
