@@ -29,6 +29,64 @@ Unix Comands
 <br>
 --------------------
 </h2>
+
+<br>
+<br>
+Ubuntu Section:
+<br>
+#Add a new user called glassfish
+<br>
+sudo adduser --home /home/glassfish --system --shell /bin/bash glassfish
+<br>
+#add a new group for glassfish administration
+<br>
+sudo groupadd glassfishadm 
+<br>
+#add your users that shall be Glassfish adminstrators
+<br>
+sudo usermod -a -G glassfishadm $myAdminUser
+<br>
+
+<br>
+sudo apt-get remove openjdk-6-jre openjdk-6-jdk
+<br>
+sudo apt-get remove openjdk-7-jre openjdk-7-jdk
+<br>
+cd /etc/alternatives
+<br>
+ls -lrt java*
+<br>
+sudo apt-get autoremove
+<br>
+sudo apt-get autoclean
+<br>
+sudo update-alternatives --config java
+<br>
+cd /etc/alternatives
+<br>
+ls -lrt java*
+<br>
+sudo apt-get install unzip
+<br>
+wget http://download.java.net/glassfish/4.1/release/glassfish-4.1.zip
+
+<br>
+<br>
+Glassfish:
+<br>
+/home/markus/glassfish/bin/asadmin start-domain domain1
+<br>
+http://localhost:4848
+<br>
+/home/markus/glassfish/bin/asadmin stop-domain domain1
+
+<br>
+<br>
+Ubuntu Section Ende
+<br>
+<br>
+<br>
+
 <br>
 copy from remote to remote:
 <br>
@@ -594,4 +652,4 @@ apropos <cmd>
 <br>
 
 <br>
-</html>
+</html><br>
