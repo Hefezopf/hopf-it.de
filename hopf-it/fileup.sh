@@ -2,13 +2,11 @@
 
 #usage:
 #chmod +x fileup.sh
-#./fileup.sh <uploadfile>
+#./fileup.sh <uploadfile> pw
 
-username=u41387060
-passwd=markushopf
 ftp -i -n -v <<EOCMDS
 open hopf-it.de
-user u41387060 markushopf
+user u41387060 $2
 binary
 put $1
 quit
