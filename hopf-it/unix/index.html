@@ -128,6 +128,8 @@ netstat -peav | grep <portnum>
 <br>
 ++++++++++++++++++++
 <br>
+find ./src -mmin -120 -ls  //  changed in the last 2 hours
+<br>
 find . -type f -name "*.xml" | xargs grep -l Suchstring
 <br>
 find . -exec grep "searchtext" '{}' \; -print
