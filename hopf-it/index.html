@@ -7,7 +7,7 @@
   <meta name="description"
     content="System- und Unternehmensberatung. Dipl.-Ing. Markus Hopf Technische Informatik (FH)" />
   <meta name="keywords"
-    content="Java, Typescript, Java, JavaScript, Spring, Hibernate, Angular, ReactJs, Nodejs, npm, JPA, Hopf, Markus, SQL, Hibernate, Kubernetes, Docker, freiberuflich, Consulting" />
+    content="Java, Typescript, Openshift, JavaScript, Spring, Hibernate, Angular, ReactJs, Nodejs, npm, JPA, Hopf, Markus, SQL, Hibernate, Kubernetes, Docker, freiberuflich, Consulting" />
   <meta name="copyright" content="Markus Hopf" />
   <meta name="publisher" content="Markus Hopf" />
   <meta name="author" content="Markus Hopf" />
@@ -266,7 +266,7 @@
                 <li id="de_" style="padding: .4em;"><a href="#lv1871">JEE Tarifrechner und Webservice</a></li>
                 <li id="de_" style="padding: .4em;"><a href="#smartphone">Smartphone Web und App Entwicklung</a></li>
                 <li id="de_" style="padding: .4em;"><a href="#ect">JEE Webapplikationen f&uuml;r Ring Back Tones</a></li>
-                <li id="de_" style="padding: .4em;"><a href="#azh">J2EE Abrechnungssystem f&uuml;r Krankenkassen - nPROD</a></li>
+                <li id="de_" style="padding: .4em;"><a href="#azh">J2EE Abrechnung f&uuml;r Krankenkassen - nPROD</a></li>
                 <li id="de_" style="padding: .4em;"><a href="#pws">J2EE Public Web Shop</a></li>
                 <li id="de_" style="padding: .4em;"><a href="#Training">Consulting und Trainer f&uuml;r Schulungen</a></li>
                 <li id="de_" style="padding: .4em;"><a href="#JNI">Java-COM Bridge &uuml;ber JNI</a></li>
@@ -294,7 +294,7 @@
                 <li id="en_" style="padding: .4em;"><a href="#en_lv1871">JEE Tariff Calculator and Webservice</a></li>
                 <li id="en_" style="padding: .4em;"><a href="#en_smartphone">Smartphone Web and App Development</a></li>
                 <li id="en_" style="padding: .4em;"><a href="#en_ect">JEE Webapplications for Ring Back Tones</a></li>
-                <li id="en_" style="padding: .4em;"><a href="#en_azh">J2EE accounting system for health insurance - nPROD</a></li>
+                <li id="en_" style="padding: .4em;"><a href="#en_azh">J2EE accounting for health insurance - nPROD</a></li>
                 <li id="en_" style="padding: .4em;"><a href="#en_pws">J2EE Public Web Shop</a></li>
                 <li id="en_" style="padding: .4em;"><a href="#en_Training">Trainings and Consulting</a></li>
                 <li id="en_" style="padding: .4em;"><a href="#en_JNI">Java-COM Bridge over JNI</a></li>
@@ -311,7 +311,6 @@
               </ul>
 
               <br />
-              <br />
 
               <!-- ************************************************************************* -->
 
@@ -319,8 +318,12 @@
               <h2 id="en_"><span id="en_fiducia"></span>Housing-saving Calculator and Taxes</h2>
 
               <p><span id="de_">Zeitraum: Von</span><span id="en_">Periode:
-                  From</span><span>&nbsp;12/2019</span>&nbsp;-&nbsp;<span>jetzt</span>&nbsp;(x&nbsp;<span
-                  id="de_">Monate</span><span id="en_">Months</span>)</p>
+                  From</span><span>&nbsp;12/2019</span>&nbsp;-&nbsp;<span>jetzt</span>
+				  <!--
+				  &nbsp;(x&nbsp;<span
+                  id="de_">Monate</span><span id="en_">Months</span>)
+				  -->
+				  </p>
               <p><span id="de_">Firma</span><span id="en_">Company</span>: Fa. Fiducia GAD in M&uuml;nchen/Aschheim</p>
               <p>Branche: Finanzdienstleistung</p>
               <p><span id="de_">Ansprechpartner</span><span id="en_">Contact person</span>: Herr Matthias Leukert, Herr
@@ -1908,8 +1911,8 @@
 
               <!-- ************************************************************************** -->
 
-              <h2 id="de_"><span id="azh"></span>J2EE Abrechnungssystem f&uuml;r Krankenkassen - nPROD</h2>
-              <h2 id="en_"><span id="en_azh"></span>J2EE accounting system for health insurance - nPROD</h2>
+              <h2 id="de_"><span id="azh"></span>J2EE Abrechnung f&uuml;r Krankenkassen - nPROD</h2>
+              <h2 id="en_"><span id="en_azh"></span>J2EE accounting for health insurance - nPROD</h2>
 
               <p><span id="de_">Zeitraum: Von</span><span id="en_">Periode:
                   From</span><span>&nbsp;04/2006</span>&nbsp;-&nbsp;<span>08/2008</span>&nbsp;(28&nbsp;<span
@@ -3082,6 +3085,7 @@
           <label id="de_">ab</label>
           <label id="en_">from</label>
           <span>Quartal
+			<span id="quartal">2/2021</span>
             <script TYPE="text/javascript">
               var d = new Date();
               var q = [2, 3, 4, 1];
@@ -3090,7 +3094,8 @@
               if (curr_quartal == 1) {
                 curr_year = curr_year + 1;
               }
-              document.write(curr_quartal + "/" + curr_year);    
+			  var quartal = document.getElementById('quartal');
+			  quartal.innerHTML = curr_quartal + "/" + curr_year;
             </script>
           </span>
         </div>
@@ -3120,15 +3125,15 @@
         <div class="set">
           <div class="single first">
             <a href="images/data/imageScrumMasterCert.PNG" rel="lightbox[cert]" title="Scrum Master Zertifikat"><img
-                src="images/data/thumbScrumMasterCert.PNG" alt="Scrum Master Zertifikat" /></a>
+                src="images/data/thumbScrumMasterCert.webp" alt="Scrum Master Zertifikat" /></a>
           </div>
           <div class="single">
             <a href="images/data/imageSpringCert.PNG" rel="lightbox[cert]" title="Spring Zertifikat"><img
-                src="images/data/thumbSpringCert.PNG" alt="Spring Zertifikat" /></a>
+                src="images/data/thumbSpringCert.webp" alt="Spring Zertifikat" /></a>
           </div>
           <div class="single">
             <a href="images/data/imageW-JAX2017.PNG" rel="lightbox[cert]" title="W-JAX Zertifikat"><img
-                src="images/data/thumbW-JAX2017.png" alt="W-JAX Zertifikat" /></a>
+                src="images/data/thumbW-JAX2017.webp" alt="W-JAX Zertifikat" /></a>
           </div>
           <div class="single">
             <a href="images/data/imageDIPLOMFH.gif" rel="lightbox[cert]" title="Diplom Urkunde"><img
@@ -3140,7 +3145,7 @@
           </div>
           <div class="single">
             <a href="images/data/imageSun-zertifikat.jpg" rel="lightbox[cert]" title="Sun Java Architekt Zertfikat"><img
-                src="images/data/thumbSun-zertifikat.jpg" alt="Sun Java Architekt Zertfikat" /></a>
+                src="images/data/thumbSun-zertifikat.webp" alt="Sun Java Architekt Zertfikat" /></a>
           </div>
           <div class="single last">
             <a href="images/data/imageOMG_UML.gif" rel="lightbox[cert]" title="OMG UML Zertfikat"><img
