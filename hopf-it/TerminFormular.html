@@ -1,17 +1,38 @@
-
 <div>
     TEST TerminFormular
 </div>
 
-<button id="buttonBuchenId" style='font-size:large; height: 50px; width: 80px;' type="button" onclick="buchen()">Buchen</button> 
+<button id="buttonBuchenId" style='font-size:large; height: 50px; width: 80px;' type="button" onclick="buchen()">Buchen</button>
 
 <script>
-function myFunction() {
-  document.getElementById("demo").innerHTML = "Hello World";
-}
+    var token1 = 'ghp_';
+    var token2 = 'Y56Fa4kw5ccmrG4dolafJwPYhOopcSiQ3pao';
 
-function buchen() {
-    alert('Error: Price not set!');
-}
+    function buchen() {
+       // alert('Error: Price not set!');
+        if (confirm('Wollen Sie den Termin reservieren?') == false) {
+            return;
+        }
+        var url = 'https://api.github.com/repos/Hefezopf/stock-analyse/dispatches';
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', url);
+        xhr.setRequestHeader('Authorization', 'token ' + token1 + token2.split("").reverse().join(""));
+        xhr.setRequestHeader('Accept', 'application/vnd.github.everest-preview+json');
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                console.log(xhr.status);
+                console.log(xhr.responseText);
+            }
+        };
+        symbolParam = 'MBG';
+        sellPriceParam = '100';
+        var data = {
+            event_type: 'sell',
+            client_payload: {
+                symbol: symbolParam,
+                sellPrice: sellPriceParam
+            }
+        };
+        xhr.send(JSON.stringify(data));        
+    }
 </script>
-
