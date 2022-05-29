@@ -62,6 +62,10 @@ jobs:
 
           reservationTimeVar=${reservationTimeInput:-$reservationTimeDefault}
 
+          echo "email: $emailVar"
+          echo "reservationDayVar: $reservationDayVar"
+          echo "reservationTimeVar $reservationTimeVar"
+
       - name: Send result via email
         uses: dawidd6/action-send-mail@v2
         with:
