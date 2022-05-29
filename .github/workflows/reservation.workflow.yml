@@ -12,14 +12,18 @@ on:
   # Can be triggered manually
   workflow_dispatch:
     inputs:
+      emailParam:
+        description: 'Email - e.g.: "info@hopf-it.de"'
+        required: true
+        default: 'info@hopf-it.de'
       reservationDayParam:
-        description: 'Reservation Day of the Week - e.g.: "Montag"'
+        description: 'Reservation Day of the Week - e.g.: "Monday"'
         required: true
-        default: 'Montag'
+        default: 'Monday'
       reservationTimeParam:
-        description: 'Reservation Time - e.g.: "8:00 Uhr"'
+        description: 'Reservation Time - e.g.: "17:00"'
         required: true
-        default: '8:00 Uhr'
+        default: '17:00'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -37,6 +41,13 @@ jobs:
       - name: Run curl reservation
         run: |
           echo "Start Reservation ..."
+
+          emailDefault='${{github.event.client_payload.email}}'
+
+          emailInput="${{github.event.inputs.emailParam}}"
+
+          emailVar=${emailInput:-$emailDefault}  
+
 
           reservationDayDefault='${{github.event.client_payload.reservationDay}}'
 
@@ -58,10 +69,10 @@ jobs:
           server_port: 465
           username: ${{secrets.MAIL_USERNAME}}
           password: ${{secrets.MAIL_PASSWORD}}
-          subject: Reservation ${{github.event.client_payload.reservationDay}} ${{github.event.client_payload.reservationDay}} Hopf-it.de
+          subject: Reservation ${{github.event.client_payload.email}} ${{github.event.client_payload.reservationDay}} ${{github.event.client_payload.reservationDay}} Hopf-it.de
           # Read file contents as body:
           body: file://reservation-email.html
-          to: ${{secrets.MAIL_ADRESS}}
+          to: ${{secrets.MAIL_ADRESS}}; ${{github.event.client_payload.email}} 
           from: Github hopf-it.de # <githubÄhopf-...de>
           # Optional content type (defaults to text/plain):
           content_type: text/html

@@ -13,6 +13,12 @@
     1 Hour Live Online Video Consulting with Markus Hopf Dipl. Ing. (FH) Technische informatik<br>
     150 € netto (178,50 € brutto)<br>
 </div>
+
+<div>
+    <br>Your Email Address<br>
+    <input name='emailId' id='emailId' style='height: 45px;' type='text' maxlength='60' value='' size='60'/>
+</div>
+
 <br>
 <table class="tg">
     <tr>
@@ -41,7 +47,27 @@
     var token2 = 'Y56Fa4kw5ccmrG4dolafJwPYhOopcSiQ3pao';
 
     function reservieren(reservationDayParam, reservationTimeParam) {
-        if (confirm('Day:' + reservationDayParam + ' Time:' + reservationTimeParam + '\nDo you want to reserve now?') == false) {
+        var emailParam = document.getElementById('emailId').value;
+
+        if (emailParam == '') {
+            alert('Error: email not set!');
+            return;
+        }
+
+        const validateEmail = (emailParam) => {
+            return String(emailParam)
+                .toLowerCase()
+                .match(
+                /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+                );
+        }; 
+
+        if (validateEmail(emailParam) == null) {      
+            alert('Error: email not valid!');
+            return;
+        }
+
+        if (confirm('Email:' + emailParam +  ' Day:' + reservationDayParam + ' Time:' + reservationTimeParam + '\nDo you want to reserve now?') == false) {
             return;
         }
         var url = 'https://api.github.com/repos/Hefezopf/hopf-it.de/dispatches';
@@ -58,6 +84,7 @@
         var data = {
             event_type: 'reservation',
             client_payload: {
+                email: emailParam,
                 reservationDay: reservationDayParam,
                 reservationTime: reservationTimeParam
             }
