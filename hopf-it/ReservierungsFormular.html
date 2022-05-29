@@ -1,14 +1,14 @@
 <div>
-    TEST TerminFormular
+    Reservierungs-Formular
 </div>
 
-<button id="buttonBuchenId" style='font-size:large; height: 50px; width: 80px;' type="button" onclick="buchen()">Buchen</button>
+<button id="buttonReservierenId" style='font-size:large; height: 50px; width: 80px;' type="button" onclick="reservieren()">Reservieren</button>
 
 <script>
     var token1 = 'ghp_';
     var token2 = 'Y56Fa4kw5ccmrG4dolafJwPYhOopcSiQ3pao';
 
-    function buchen() {
+    function reservieren() {
        // alert('Error: Price not set!');
         if (confirm('Wollen Sie den Termin reservieren?') == false) {
             return;
