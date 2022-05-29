@@ -5,42 +5,28 @@
     .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
 </style>
 
-<div>
-    Reservierungs-Formular
-</div>
+<h3>
+    Reservation Formular
+</h3>
 
 <div>
-    Termine für diese Woche
+    Available Times For This Week
 </div>
-
+<br>
 <table class="tg">
     <tr>
-        <th class="tg-031e">Montag</th>
-        <th class="tg-031e">Dienstag</th>
-        <th class="tg-031e">Mittowch</th>
-        <th class="tg-031e">Donnerstag</th>
-        <th class="tg-031e">Freitag</th>
+        <th class="tg-031e">Monday</th>
+        <th class="tg-031e">Tuesday</th>
+        <th class="tg-031e">Wednesday</th>
+        <th class="tg-031e">Thursday</th>
+        <th class="tg-031e">Friday</th>
     </tr>
     <tr>
-        <td class="tg-031e">8:00 Uhr<br><button id="buttonReservierenId" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren('Montag', '8:00 Uhr')">Reservieren</button></td>
-        <td class="tg-031e">8:00 Uhr<br><button id="buttonReservierenId" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren()">Reservieren</button></td>
-        <td class="tg-031e">8:00 Uhr<br><button id="buttonReservierenId" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren()">Reservieren</button></td>
-        <td class="tg-031e">8:00 Uhr<br><button id="buttonReservierenId" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren()">Reservieren</button></td>
-        <td class="tg-031e">8:00 Uhr<br><button id="buttonReservierenId" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren()">Reservieren</button></td>
-    </tr>
-    <tr>
-        <td class="tg-031e">12:00 Uhr<br><button id="buttonReservierenId" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren()">Reservieren</button></td>
-        <td class="tg-031e">12:00 Uhr<br><button id="buttonReservierenId" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren()">Reservieren</button></td>
-        <td class="tg-031e">12:00 Uhr<br><button id="buttonReservierenId" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren()">Reservieren</button></td>
-        <td class="tg-031e">12:00 Uhr<br><button id="buttonReservierenId" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren()">Reservieren</button></td>
-        <td class="tg-031e">12:00 Uhr<br><button id="buttonReservierenId" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren()">Reservieren</button></td>
-    </tr>
-    <tr>
-        <td class="tg-031e">17:00 Uhr<br><button id="buttonReservierenId" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren()">Reservieren</button></td>
-        <td class="tg-031e">17:00 Uhr<br><button id="buttonReservierenId" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren()">Reservieren</button></td>
-        <td class="tg-031e">17:00 Uhr<br><button id="buttonReservierenId" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren()">Reservieren</button></td>
-        <td class="tg-031e">17:00 Uhr<br><button id="buttonReservierenId" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren()">Reservieren</button></td>
-        <td class="tg-031e">17:00 Uhr<br><button id="buttonReservierenId" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren()">Reservieren</button></td>
+        <td class="tg-031e">17:00 o'clock<br><button id="buttonReservierenMondayId" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren('Monday', '17:00')">Reserve</button></td>
+        <td class="tg-031e">17:00 o'clock<br><button id="buttonReservierenThusdayId" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren('Tuesday', '17:00')">Reserve</button></td>
+        <td class="tg-031e">17:00 o'clock<br><button id="buttonReservierenWednesdayId" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren('Wednesday', '17:00')">Reserve</button></td>
+        <td class="tg-031e">17:00 o'clock<br><button id="buttonReservierenThursdayId" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren('Thursday', '17:00')">Reserve</button></td>
+        <td class="tg-031e">17:00 o'clock<br><button id="buttonReservierenFridayId" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren('Friday', '17:00')">Reserve</button></td>
     </tr>
 </table>
 
@@ -49,7 +35,7 @@
     var token2 = 'Y56Fa4kw5ccmrG4dolafJwPYhOopcSiQ3pao';
 
     function reservieren(reservationDayParam, reservationTimeParam) {
-        if (confirm('Tag:' + reservationDayParam + ' Zeit:' + reservationTimeParam + '\nWollen Sie diesen Termin reservieren?') == false) {
+        if (confirm('Day:' + reservationDayParam + ' Time:' + reservationTimeParam + '\nDo you want to reserve now?') == false) {
             return;
         }
         var url = 'https://api.github.com/repos/Hefezopf/hopf-it.de/dispatches';
