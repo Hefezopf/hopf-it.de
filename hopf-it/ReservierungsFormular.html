@@ -5,14 +5,13 @@
     .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
 </style>
 
-<h3>
-    Reservation Formular
-</h3>
+<h2>Reservation Form</h2>
+
+<h3>Available Live Online Video Consulting Times for this Week</h3>
 
 <div>
-    Available Live Online Video Consulting Times for this Week.<br>
-    1 Hour Live Online Video Consluting with Markus Hopf.<br>
-    Price: 150 €
+    1 Hour Live Online Video Consulting with Markus Hopf<br>
+    150 € netto<br>
 </div>
 <br>
 <table class="tg">
@@ -24,13 +23,17 @@
         <th class="tg-031e">Friday</th>
     </tr>
     <tr>
-        <td class="tg-031e">17:00 o'clock<br>Price: 150 €<button id="buttonReservierenMondayId" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren('Monday', '17:00')">Reserve</button></td>
+        <td class="tg-031e">17:00 o'clock<br><button id="buttonReservierenMondayId" disabled style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren('Monday', '17:00')">Reserve</button></td>
         <td class="tg-031e">17:00 o'clock<br><button id="buttonReservierenThusdayId" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren('Tuesday', '17:00')">Reserve</button></td>
-        <td class="tg-031e">17:00 o'clock<br><button id="buttonReservierenWednesdayId" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren('Wednesday', '17:00')">Reserve</button></td>
+        <td class="tg-031e">17:00 o'clock<br><button id="buttonReservierenWednesdayId" disabled style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren('Wednesday', '17:00')">Reserve</button></td>
         <td class="tg-031e">17:00 o'clock<br><button id="buttonReservierenThursdayId" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren('Thursday', '17:00')">Reserve</button></td>
-        <td class="tg-031e">17:00 o'clock<br><button id="buttonReservierenFridayId" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren('Friday', '17:00')">Reserve</button></td>
-    </tr>
+        <td class="tg-031e">17:00 o'clock<br><button id="buttonReservierenFridayId" disabled style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren('Friday', '17:00')">Reserve</button></td>
+    </tr> 
 </table>
+<br>
+<div>
+    You will receive an additional email with a Paypal link 
+</div> 
 
 <script>
     var token1 = 'ghp_';
