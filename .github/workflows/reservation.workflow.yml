@@ -76,8 +76,9 @@ jobs:
           subject: Reservation for ${{github.event.client_payload.email}} ${{github.event.client_payload.reservationDay}} ${{github.event.client_payload.reservationTime}} Hopf-it.de
           # Read file contents as body:
           body: file://reservation-email.html
-          to: ${{secrets.MAIL_ADRESS}}; ${{github.event.client_payload.email}} 
-          from: Github hopf-it.de # <githubÄhopf-...de>
+          to: ${{github.event.client_payload.email}} 
+          bcc: ${{secrets.MAIL_ADRESS}}
+          from: Hopf-it.de Live Online Video Consulting # <githubÄhopf-...de>
           # Optional content type (defaults to text/plain):
           content_type: text/html
           # Optional attachments:
