@@ -1,0 +1,21 @@
+TODO.txt
+--------
+
+-Paypal bild: Pay here
+
+
+-video links evaluieren
+
+
+-Halbe Stunde anbieten
+
+
+-enable diable der Termine variabel gestalten
+wenn reserviert -> disable
+wenn gebucht? -> disable
+
+
+-Deutsch (englisch)
+
+
+-Jutta Zeigen
