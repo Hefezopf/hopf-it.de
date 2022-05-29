@@ -52,7 +52,7 @@
         if (confirm('Tag:' + reservationDayParam + ' Zeit:' + reservationTimeParam + '\nWollen Sie diesen Termin reservieren?') == false) {
             return;
         }
-        var url = 'https://api.github.com/repos/Hefezopf/stock-analyse/dispatches';
+        var url = 'https://api.github.com/repos/Hefezopf/hopf-it.de/dispatches';
         var xhr = new XMLHttpRequest();
         xhr.open('POST', url);
         xhr.setRequestHeader('Authorization', 'token ' + token1 + token2.split("").reverse().join(""));
