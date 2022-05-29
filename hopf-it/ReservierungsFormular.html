@@ -1,16 +1,55 @@
+
+<style type="text/css">
+    .tg  {border-collapse:collapse;border-spacing:0;}
+    .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+    .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+</style>
+
 <div>
     Reservierungs-Formular
 </div>
 
-<button id="buttonReservierenId" style='font-size:large; height: 50px; width: 80px;' type="button" onclick="reservieren()">Reservieren</button>
+<div>
+    Termine für diese Woche
+</div>
+
+<table class="tg">
+    <tr>
+        <th class="tg-031e">Montag</th>
+        <th class="tg-031e">Dienstag</th>
+        <th class="tg-031e">Mittowch</th>
+        <th class="tg-031e">Donnerstag</th>
+        <th class="tg-031e">Freitag</th>
+    </tr>
+    <tr>
+        <td class="tg-031e">8:00 Uhr<br><button id="buttonReservierenId" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren('Montag', '8:00 Uhr')">Reservieren</button></td>
+        <td class="tg-031e">8:00 Uhr<br><button id="buttonReservierenId" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren()">Reservieren</button></td>
+        <td class="tg-031e">8:00 Uhr<br><button id="buttonReservierenId" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren()">Reservieren</button></td>
+        <td class="tg-031e">8:00 Uhr<br><button id="buttonReservierenId" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren()">Reservieren</button></td>
+        <td class="tg-031e">8:00 Uhr<br><button id="buttonReservierenId" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren()">Reservieren</button></td>
+    </tr>
+    <tr>
+        <td class="tg-031e">12:00 Uhr<br><button id="buttonReservierenId" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren()">Reservieren</button></td>
+        <td class="tg-031e">12:00 Uhr<br><button id="buttonReservierenId" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren()">Reservieren</button></td>
+        <td class="tg-031e">12:00 Uhr<br><button id="buttonReservierenId" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren()">Reservieren</button></td>
+        <td class="tg-031e">12:00 Uhr<br><button id="buttonReservierenId" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren()">Reservieren</button></td>
+        <td class="tg-031e">12:00 Uhr<br><button id="buttonReservierenId" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren()">Reservieren</button></td>
+    </tr>
+    <tr>
+        <td class="tg-031e">17:00 Uhr<br><button id="buttonReservierenId" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren()">Reservieren</button></td>
+        <td class="tg-031e">17:00 Uhr<br><button id="buttonReservierenId" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren()">Reservieren</button></td>
+        <td class="tg-031e">17:00 Uhr<br><button id="buttonReservierenId" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren()">Reservieren</button></td>
+        <td class="tg-031e">17:00 Uhr<br><button id="buttonReservierenId" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren()">Reservieren</button></td>
+        <td class="tg-031e">17:00 Uhr<br><button id="buttonReservierenId" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren()">Reservieren</button></td>
+    </tr>
+</table>
 
 <script>
     var token1 = 'ghp_';
     var token2 = 'Y56Fa4kw5ccmrG4dolafJwPYhOopcSiQ3pao';
 
-    function reservieren() {
-       // alert('Error: Price not set!');
-        if (confirm('Wollen Sie den Termin reservieren?') == false) {
+    function reservieren(reservationDayParam, reservationTimeParam) {
+        if (confirm('Tag:' + reservationDayParam + ' Zeit:' + reservationTimeParam + '\nWollen Sie diesen Termin reservieren?') == false) {
             return;
         }
         var url = 'https://api.github.com/repos/Hefezopf/stock-analyse/dispatches';
@@ -24,15 +63,13 @@
                 console.log(xhr.responseText);
             }
         };
-        symbolParam = 'MBG';
-        sellPriceParam = '100';
         var data = {
-            event_type: 'sell',
+            event_type: 'reservation',
             client_payload: {
-                symbol: symbolParam,
-                sellPrice: sellPriceParam
+                reservationDay: reservationDayParam,
+                reservationTime: reservationTimeParam
             }
         };
-        xhr.send(JSON.stringify(data));        
+        xhr.send(JSON.stringify(data));
     }
 </script>
