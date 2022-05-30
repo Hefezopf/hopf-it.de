@@ -1,8 +1,11 @@
 TODO.txt
 --------
 
+-Javascript / Workflow der die verstrichenen Tage disabled
+
 
 -video links evaluieren
+https://meet.google.com/
 
 
 -Halbe Stunde anbieten

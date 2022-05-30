@@ -43,28 +43,22 @@ jobs:
           echo "Start Reservation ..."
 
           emailDefault='${{github.event.client_payload.email}}'
-
           emailInput="${{github.event.inputs.emailParam}}"
-
           emailVar=${emailInput:-$emailDefault}  
 
-
           reservationDayDefault='${{github.event.client_payload.reservationDay}}'
-
           reservationDayInput="${{github.event.inputs.reservationDayParam}}"
-
           reservationDayVar=${reservationDayInput:-$reservationDayDefault}  
 
-
           reservationTimeDefault='${{github.event.client_payload.reservationTime}}'
-
           reservationTimeInput="${{github.event.inputs.reservationTimeParam}}"
-
           reservationTimeVar=${reservationTimeInput:-$reservationTimeDefault}
 
-          echo "email: $emailVar"
-          echo "reservationDayVar: $reservationDayVar"
-          echo "reservationTimeVar $reservationTimeVar"
+          creationDate=$(TZ=EST-1EDT date +"%e-%b-%Y %R") # 29-Apr-2021 08:52 # +2h 
+          echo "Creation Date: $creationDate"
+          echo "Email: $emailVar"
+          echo "Reservation Day: $reservationDayVar"
+          echo "Reservation Time: $reservationTimeVar"
 
       - name: Send result via email
         uses: dawidd6/action-send-mail@v2
@@ -75,7 +69,7 @@ jobs:
           password: ${{secrets.MAIL_PASSWORD}}
           subject: Reservation for ${{github.event.client_payload.email}} ${{github.event.client_payload.reservationDay}} ${{github.event.client_payload.reservationTime}} Hopf-it.de
           # Read file contents as body:
-          body: file://reservation-email.html
+          body: file://hopf-it/reservation-email.html
           to: ${{github.event.client_payload.email}} 
           bcc: ${{secrets.MAIL_ADRESS}}
           from: Hopf-it.de Live Online Video Consulting # <githubÄhopf-...de>
