@@ -6,6 +6,7 @@ TODO.txt
 
 -video links evaluieren
 https://meet.google.com/
+http://meet.google.com/new
 
 
 -Halbe Stunde anbieten
