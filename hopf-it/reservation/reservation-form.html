@@ -30,11 +30,11 @@
         <th class="tg-031e">Freitag</th>
     </tr>
     <tr>
-        <td class="tg-031e">17:00 Uhr<br><button id="buttonReservierenId1" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren('Montag', '17:00')">Reservieren</button></td>
-        <td class="tg-031e">17:00 Uhr<br><button id="buttonReservierenId2" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren('Dienstag', '17:00')">Reservieren</button></td>
-        <td class="tg-031e">17:00 Uhr<br><button id="buttonReservierenId3" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren('Mittwoch', '17:00')">Reservieren</button></td>
-        <td class="tg-031e">17:00 Uhr<br><button id="buttonReservierenId4" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren('Donnerstag', '17:00')">Reservieren</button></td>
-        <td class="tg-031e">17:00 Uhr<br><button id="buttonReservierenId5" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren('Freitag', '17:00')">Reservieren</button></td>
+        <td class="tg-031e">17:00 Uhr<br><button id="buttonReservierenId1" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren('buttonReservierenId1', 'Montag', '17:00')">Reservieren</button></td>
+        <td class="tg-031e">17:00 Uhr<br><button id="buttonReservierenId2" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren('buttonReservierenId2', 'Dienstag', '17:00')">Reservieren</button></td>
+        <td class="tg-031e">17:00 Uhr<br><button id="buttonReservierenId3" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren('buttonReservierenId3', 'Mittwoch', '17:00')">Reservieren</button></td>
+        <td class="tg-031e">17:00 Uhr<br><button id="buttonReservierenId4" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren('buttonReservierenId4', 'Donnerstag', '17:00')">Reservieren</button></td>
+        <td class="tg-031e">17:00 Uhr<br><button id="buttonReservierenId5" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren('buttonReservierenId5', 'Freitag', '17:00')">Reservieren</button></td>
     </tr> 
 </table>
 <br>
@@ -103,7 +103,7 @@ dynamicButton.disabled = true;
         document.getElementById('buttonReservierenId1').disabled = true;
     }
 
-    function reservieren(reservationDayParam, reservationTimeParam) {
+    function reservieren(buttonIdParam, reservationDayParam, reservationTimeParam) {
         var emailParam = document.getElementById('emailId').value;
         if (emailParam == '') {
             alert('Fehler: EMail nicht vorhanden!');
@@ -124,6 +124,9 @@ dynamicButton.disabled = true;
         if (confirm('EMail:' + emailParam +  ' Tag:' + reservationDayParam + ' Zeit:' + reservationTimeParam + ' Preis:178,50€ brutto' + '\nMöchten Sie jetzt reservieren?') == false) {
             return;
         }
+
+        // Disable currently clicked button
+        document.getElementById(buttonIdParam).disabled = true;
 
         var url = 'https://api.github.com/repos/Hefezopf/hopf-it.de/dispatches';
         var xhr = new XMLHttpRequest();
