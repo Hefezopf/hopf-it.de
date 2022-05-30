@@ -1,3 +1,3 @@
 function disableButton() {
-    document.getElementById('buttonReservierenId4').disabled = true;
+    document.getElementById('buttonReservierenId2').disabled = true;
 }
