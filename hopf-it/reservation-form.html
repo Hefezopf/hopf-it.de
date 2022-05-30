@@ -31,11 +31,11 @@
         <th class="tg-031e">Freitag</th>
     </tr>
     <tr>
-        <td class="tg-031e">17:00 Uhr<br><button id="buttonReservierenMondayId" disabled style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren('Montag', '17:00')">Reservieren</button></td>
-        <td class="tg-031e">17:00 Uhr<br><button id="buttonReservierenThusdayId" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren('Dienstag', '17:00')">Reservieren</button></td>
-        <td class="tg-031e">17:00 Uhr<br><button id="buttonReservierenWednesdayId" disabled style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren('Mittwoch', '17:00')">Reservieren</button></td>
-        <td class="tg-031e">17:00 Uhr<br><button id="buttonReservierenThursdayId" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren('Donnerstag', '17:00')">Reservieren</button></td>
-        <td class="tg-031e">17:00 Uhr<br><button id="buttonReservierenFridayId" disabled style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren('Freitag', '17:00')">Reservieren</button></td>
+        <td class="tg-031e">17:00 Uhr<br><button id="buttonReservierenId1" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren('Montag', '17:00')">Reservieren</button></td>
+        <td class="tg-031e">17:00 Uhr<br><button id="buttonReservierenId2" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren('Dienstag', '17:00')">Reservieren</button></td>
+        <td class="tg-031e">17:00 Uhr<br><button id="buttonReservierenId3" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren('Mittwoch', '17:00')">Reservieren</button></td>
+        <td class="tg-031e">17:00 Uhr<br><button id="buttonReservierenId4" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren('Donnerstag', '17:00')">Reservieren</button></td>
+        <td class="tg-031e">17:00 Uhr<br><button id="buttonReservierenId5" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren('Freitag', '17:00')">Reservieren</button></td>
     </tr> 
 </table>
 <br>
@@ -48,14 +48,43 @@
     var token1 = 'ghp_';
     var token2 = 'Y56Fa4kw5ccmrG4dolafJwPYhOopcSiQ3pao';
 
+    const dayOfWeekDigit = new Date().getDay();
+    // Allways reserved: Mo, Mi, Fr!!
+    document.getElementById('buttonReservierenId1').disabled = true;
+    document.getElementById('buttonReservierenId3').disabled = true;
+    document.getElementById('buttonReservierenId5').disabled = true;
+    if(dayOfWeekDigit >= 5){ // Friday = 5
+        document.getElementById('buttonReservierenId1').disabled = true;
+        document.getElementById('buttonReservierenId2').disabled = true;
+        document.getElementById('buttonReservierenId3').disabled = true;
+        document.getElementById('buttonReservierenId4').disabled = true;
+        document.getElementById('buttonReservierenId5').disabled = true;
+    }
+    else if(dayOfWeekDigit >= 4){ 
+        document.getElementById('buttonReservierenId1').disabled = true;
+        document.getElementById('buttonReservierenId2').disabled = true;
+        document.getElementById('buttonReservierenId3').disabled = true;
+        document.getElementById('buttonReservierenId4').disabled = true;
+    }
+    else if(dayOfWeekDigit >= 3){ 
+        document.getElementById('buttonReservierenId1').disabled = true;
+        document.getElementById('buttonReservierenId2').disabled = true;
+        document.getElementById('buttonReservierenId3').disabled = true;
+    }
+    else if(dayOfWeekDigit >= 2){
+        document.getElementById('buttonReservierenId1').disabled = true;
+        document.getElementById('buttonReservierenId2').disabled = true;
+   }
+    else if(dayOfWeekDigit >= 1){ // Monday = 1
+        document.getElementById('buttonReservierenId1').disabled = true;
+    }
+
     function reservieren(reservationDayParam, reservationTimeParam) {
         var emailParam = document.getElementById('emailId').value;
-
         if (emailParam == '') {
             alert('Fehler: EMail nicht vorhanden!');
             return;
         }
-
         const validateEmail = (emailParam) => {
             return String(emailParam)
                 .toLowerCase()
@@ -63,7 +92,6 @@
                 /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
                 );
         }; 
-
         if (validateEmail(emailParam) == null) {      
             alert('Fehler: EMail nicht korrekt!');
             return;
@@ -72,6 +100,7 @@
         if (confirm('EMail:' + emailParam +  ' Tag:' + reservationDayParam + ' Zeit:' + reservationTimeParam + ' Preis:178,50€ brutto' + '\nMöchten Sie jetzt reservieren?') == false) {
             return;
         }
+
         var url = 'https://api.github.com/repos/Hefezopf/hopf-it.de/dispatches';
         var xhr = new XMLHttpRequest();
         xhr.open('POST', url);
