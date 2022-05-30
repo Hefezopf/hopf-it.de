@@ -1,8 +1,6 @@
 TODO.txt
 --------
 
--Paypal bild: Pay here
-
 
 -video links evaluieren
 
