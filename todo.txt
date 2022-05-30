@@ -5,13 +5,6 @@ TODO.txt
 -15 min/Halbe Stunde anbieten
 
 
--enable diable der Termine variabel gestalten
-wenn reserviert -> disable
-wenn gebucht? -> disable
-Bei Reservierung im WF form/JS include Datei schreiben und committen
-WF schreiben der diese form/JS include Datei am Wochenende resettet
-
-
 -Deutsch (englisch)
 
 
