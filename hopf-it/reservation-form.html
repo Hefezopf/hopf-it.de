@@ -59,10 +59,26 @@
     document.getElementById('buttonReservierenId3').disabled = true;
     document.getElementById('buttonReservierenId5').disabled = true;
   
-    var dynamicButton = document.getElementById('DISABLE_BUTTON_PLACEHOLDER');
+    var dynamicButton = document.getElementById('DISABLE_BUTTON_PLACEHOLDER1');
     if(dynamicButton){
         dynamicButton.disabled = true;
     }
+    dynamicButton = document.getElementById('DISABLE_BUTTON_PLACEHOLDER2');
+    if(dynamicButton){
+        dynamicButton.disabled = true;
+    }    
+    dynamicButton = document.getElementById('DISABLE_BUTTON_PLACEHOLDER3');
+    if(dynamicButton){
+        dynamicButton.disabled = true;
+    }    
+    dynamicButton = document.getElementById('DISABLE_BUTTON_PLACEHOLDER4');
+    if(dynamicButton){
+        dynamicButton.disabled = true;
+    }    
+    dynamicButton = document.getElementById('DISABLE_BUTTON_PLACEHOLDER5');
+    if(dynamicButton){
+        dynamicButton.disabled = true;
+    }    
 
     if(dayOfWeekDigit >= 5){ // Friday = 5
         document.getElementById('buttonReservierenId1').disabled = true;

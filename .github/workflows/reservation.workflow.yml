@@ -62,23 +62,23 @@ jobs:
 
           if [ "$reservationDayVar" = 'Montag' ]; then
             sed DISABLE_BUTTON_PLACEHOLDER
-            sed -i 's/DISABLE_BUTTON_PLACEHOLDER/buttonReservierenId1/g' hopf-it/reservation-form.html
+            sed -i 's/DISABLE_BUTTON_PLACEHOLDER1/buttonReservierenId1/g' hopf-it/reservation-form.html
             #cp hopf-it/js/dynamic-include-disable-button-1.js hopf-it/js/dynamic-include.js
           fi
           if [ "$reservationDayVar" = 'Dienstag' ]; then
-            sed -i 's/DISABLE_BUTTON_PLACEHOLDER/buttonReservierenId2/g' hopf-it/reservation-form.html
+            sed -i 's/DISABLE_BUTTON_PLACEHOLDER2/buttonReservierenId2/g' hopf-it/reservation-form.html
             #cp hopf-it/js/dynamic-include-disable-button-2.js hopf-it/js/dynamic-include.js
           fi
           if [ "$reservationDayVar" = 'Mittwoch' ]; then
-            sed -i 's/DISABLE_BUTTON_PLACEHOLDER/buttonReservierenId3/g' hopf-it/reservation-form.html
+            sed -i 's/DISABLE_BUTTON_PLACEHOLDER3/buttonReservierenId3/g' hopf-it/reservation-form.html
             #cp hopf-it/js/dynamic-include-disable-button-3.js hopf-it/js/dynamic-include.js
           fi
           if [ "$reservationDayVar" = 'Donnerstag' ]; then
-            sed -i 's/DISABLE_BUTTON_PLACEHOLDER/buttonReservierenId4/g' hopf-it/reservation-form.html
+            sed -i 's/DISABLE_BUTTON_PLACEHOLDER4/buttonReservierenId4/g' hopf-it/reservation-form.html
             #cp hopf-it/js/dynamic-include-disable-button-4.js hopf-it/js/dynamic-include.js
           fi
           if [ "$reservationDayVar" = 'Freitag' ]; then
-            sed -i 's/DISABLE_BUTTON_PLACEHOLDER/buttonReservierenId5/g' hopf-it/reservation-form.html
+            sed -i 's/DISABLE_BUTTON_PLACEHOLDER5/buttonReservierenId5/g' hopf-it/reservation-form.html
             #cp hopf-it/dynjs/dynamicamic-include-disable-button-5.js hopf-it/js/dynamic-include.js
           fi
 
