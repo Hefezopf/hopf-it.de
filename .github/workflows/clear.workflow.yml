@@ -38,7 +38,7 @@ jobs:
         run: |
           echo "Start Clear Reservation ..."
 
-          sed -i '/\/\/BEGIN_PLACEHOLDER/,/\/\/END_PLACEHOLDER/c\\/\/BEGIN_PLACEHOLDER\nvar dynamicButton = document.getElementById('DISABLE_BUTTON_PLACEHOLDER1');\nif(dynamicButton){\ndynamicButton.disabled = true;\n}dynamicButton = document.getElementById('DISABLE_BUTTON_PLACEHOLDER2');\nif(dynamicButton){\ndynamicButton.disabled = true;\n}dynamicButton = document.getElementById('DISABLE_BUTTON_PLACEHOLDER3');\nif(dynamicButton){\ndynamicButton.disabled = true;\n}\ndynamicButton = document.getElementById('DISABLE_BUTTON_PLACEHOLDER4');\nif(dynamicButton){\ndynamicButton.disabled = true;\n}\ndynamicButton = document.getElementById('DISABLE_BUTTON_PLACEHOLDER5');\nif(dynamicButton){\ndynamicButton.disabled = true;\n}\n\/\/END_PLACEHOLDER' hopf-it/reservation-form.html
+          sed -i '/\/\/BEGIN_PLACEHOLDER/,/\/\/END_PLACEHOLDER/c\\/\/BEGIN_PLACEHOLDER\nvar dynamicButton = document.getElementById("DISABLE_BUTTON_PLACEHOLDER1");\nif(dynamicButton){\ndynamicButton.disabled = true;\n}dynamicButton = document.getElementById("DISABLE_BUTTON_PLACEHOLDER2");\nif(dynamicButton){\ndynamicButton.disabled = true;\n}dynamicButton = document.getElementById("DISABLE_BUTTON_PLACEHOLDER3");\nif(dynamicButton){\ndynamicButton.disabled = true;\n}\ndynamicButton = document.getElementById("DISABLE_BUTTON_PLACEHOLDER4");\nif(dynamicButton){\ndynamicButton.disabled = true;\n}\ndynamicButton = document.getElementById("DISABLE_BUTTON_PLACEHOLDER5");\nif(dynamicButton){\ndynamicButton.disabled = true;\n}\n\/\/END_PLACEHOLDER' hopf-it/reservation-form.html
 
           git config user.email ${{secrets.MAIL_ADRESS}}
           git config user.name "Markus Hopf"
