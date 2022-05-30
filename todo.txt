@@ -1,12 +1,7 @@
 TODO.txt
---------
+########
 
 -Javascript / Workflow der die verstrichenen Tage disabled
-
-
--video links evaluieren
-https://meet.google.com/
-http://meet.google.com/new
 
 
 -Halbe Stunde anbieten
@@ -21,4 +16,5 @@ wenn gebucht? -> disable
 
 
 -Jutta Zeigen
-Wie schreibt mal email
+Gegen lesen
+Wie schreibt mal EMail
