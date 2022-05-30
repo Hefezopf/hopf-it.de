@@ -45,15 +45,22 @@
     Die Rechnung wird Ihnen nach der Beratung zugestellt.<br>
 </div> 
 
+
+<script src="dynamic-include.js"></script>
+
 <script>
     var token1 = 'ghp_';
     var token2 = 'Y56Fa4kw5ccmrG4dolafJwPYhOopcSiQ3pao';
 
     const dayOfWeekDigit = new Date().getDay();
+    
     // Allways reserved: Mo, Mi, Fr!!
     document.getElementById('buttonReservierenId1').disabled = true;
     document.getElementById('buttonReservierenId3').disabled = true;
     document.getElementById('buttonReservierenId5').disabled = true;
+  
+    updateButtons();
+
     if(dayOfWeekDigit >= 5){ // Friday = 5
         document.getElementById('buttonReservierenId1').disabled = true;
         document.getElementById('buttonReservierenId2').disabled = true;
