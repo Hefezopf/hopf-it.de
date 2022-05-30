@@ -61,19 +61,19 @@ jobs:
           echo "Reservation Time: $reservationTimeVar"
 
           if [ "$reservationDayVar" = 'Montag' ]; then
-            cp dynamic-include-disable-button-1.js dynamic-include.js
+            cp hopf-it/dynamic-include-disable-button-1.js hopf-it/dynamic-include.js
           fi
           if [ "$reservationDayVar" = 'Dienstag' ]; then
-            cp dynamic-include-disable-button-2.js dynamic-include.js
+            cp hopf-it/dynamic-include-disable-button-2.js hopf-it/dynamic-include.js
           fi
           if [ "$reservationDayVar" = 'Mittwoch' ]; then
-            cp dynamic-include-disable-button-3.js dynamic-include.js
+            cp hopf-it/dynamic-include-disable-button-3.js hopf-it/dynamic-include.js
           fi
           if [ "$reservationDayVar" = 'Donnerstag' ]; then
-            cp dynamic-include-disable-button-4.js dynamic-include.js
+            cp hopf-it/dynamic-include-disable-button-4.js hopf-it/dynamic-include.js
           fi
           if [ "$reservationDayVar" = 'Freitag' ]; then
-            cp dynamic-include-disable-button-5.js dynamic-include.js
+            cp hopf-it/dynamic-include-disable-button-5.js hopf-it/dynamic-include.js
           fi
 
           git config user.email ${{secrets.MAIL_ADRESS}}
