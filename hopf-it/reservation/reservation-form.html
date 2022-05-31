@@ -6,7 +6,16 @@
 
 <h2>Reservierungs Formular</h2>
 
-<h3>Verf&uuml;gbare Live Online Video Beratungs Zeiten f&uuml;r diese Woche</h3>
+<h3>Warum sollten Sie eine Online Beratung buchen?</h3>
+
+<div>
+    <ul>
+        <li>Profiltieren Sie von den detailierten, umfangreichen und langjährigem Expertenwissen</li> 
+        <li>Sie stellen konkrete Fragen und erwarten kompetente Lösungen</li> 
+    </ul>
+</div>
+
+<h3>Kosten</h3>
 
 <div>
     <ul>
@@ -15,12 +24,16 @@
     </ul>
 </div>
 
+<h3>Ihre EMail Adresse</h3>
+
 <div>
-    <br>Ihre EMail Adresse<br>
     <input name='emailId' id='emailId' style='height: 45px;' type='text' maxlength='60' value='' size='60'/>
 </div>
 
 <br>
+<h3>Verf&uuml;gbare Live Online Video Beratungs Zeiten f&uuml;r diese Woche</h3>
+
+
 <table class="tg">
     <tr>
         <th class="tg-031e">Montag</th>
@@ -107,24 +120,27 @@ dynamicButton.disabled = true;
     }
 
     function reservieren(buttonIdParam, reservationDayParam, reservationTimeParam) {
-        var emailParam = document.getElementById('emailId').value;
-        if (emailParam == '') {
-            alert('Fehler: EMail nicht vorhanden!');
+        var emailElem = document.getElementById('emailId');
+        var emailValue = emailElem.value;
+        if (emailValue == '') {
+            emailElem.style.borderColor = 'red';
+            alert('Bitte geben Sie zuerst Ihre EMail Adresse an!');
             return;
         }
-        const validateEmail = (emailParam) => {
-            return String(emailParam)
+        const validateEmail = (emailValue) => {
+            return String(emailValue)
                 .toLowerCase()
                 .match(
                 /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
                 );
         }; 
-        if (validateEmail(emailParam) == null) {      
-            alert('Fehler: EMail nicht korrekt!');
+        if (validateEmail(emailValue) == null) { 
+            emailElem.style.borderColor = 'red';     
+            alert('Bitte geben Sie eine korrekte EMail Adresse ein!');
             return;
         }
 
-        if (confirm('EMail:' + emailParam +  ' Tag:' + reservationDayParam + ' Zeit:' + reservationTimeParam + ' Preis:178,50€ brutto' + '\nMöchten Sie jetzt reservieren?') == false) {
+        if (confirm('Ihre Daten:\n\nEMail ' + emailValue +  '\nTag ' + reservationDayParam + '\nZeit ' + reservationTimeParam + ' Uhr\nPreis 178,50€ brutto\n\nMöchten Sie jetzt reservieren?') == false) {
             return;
         }
 
@@ -145,7 +161,7 @@ dynamicButton.disabled = true;
         var data = {
             event_type: 'reservation',
             client_payload: {
-                email: emailParam,
+                email: emailValue,
                 reservationDay: reservationDayParam,
                 reservationTime: reservationTimeParam
             }
