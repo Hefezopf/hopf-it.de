@@ -146,6 +146,7 @@ dynamicButton.disabled = true;
 
         // Disable currently clicked button
         document.getElementById(buttonIdParam).disabled = true;
+        emailElem.style.borderColor = ''; 
 
         var url = 'https://api.github.com/repos/Hefezopf/hopf-it.de/dispatches';
         var xhr = new XMLHttpRequest();
