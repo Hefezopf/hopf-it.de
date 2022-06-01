@@ -13,7 +13,7 @@ on:
   workflow_dispatch:
     inputs:
       emailParam:
-        description: 'Email - e.g.: "info@hopf-it.de"'
+        description: 'E-Mail - e.g.: "info@hopf-it.de"'
         required: true
         default: 'info@hopf-it.de'
       reservationDayParam:
@@ -56,7 +56,7 @@ jobs:
 
           creationDate=$(TZ=EST-1EDT date +"%e-%b-%Y %R") # 29-Apr-2021 08:52 # +2h 
           echo "Creation Date: $creationDate"
-          echo "Email: $emailVar"
+          echo "E-Mail: $emailVar"
           echo "Reservation Day: $reservationDayVar"
           echo "Reservation Time: $reservationTimeVar"
 

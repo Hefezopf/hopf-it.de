@@ -7,9 +7,9 @@ Beschreibung wie der Ablauf nach der Bezahlung per PayPal:
 oder 
 -GoogleMeet Link generieren mit http://meet.google.com/new (leider ist hier die markus.hopf08@googlemail.com Adresse)
 
--Email mit Link schreiben und versenden
+-E-Mail mit Link schreiben und versenden
 oder
--Teilnehmer EMail direkt aus dem Kalender heraus hinzufügen
+-Teilnehmer E-Mail direkt aus dem Kalender heraus hinzufügen
 
 -Rechung schreiben
 

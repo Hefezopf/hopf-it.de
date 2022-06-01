@@ -19,7 +19,7 @@
     </ul>
 </div>
 
-<h3>Ihre EMail Adresse</h3>
+<h3>Ihre E-Mail Adresse</h3>
 <div>
     <input name='emailId' id='emailId' style='height: 45px;' type='text' maxlength='40' value='' size='40'/>
 </div>
@@ -98,7 +98,7 @@
 <br>
 <div style="float: left;">
     <ul>
-        <li>Sie erhalten sofort eine EMail mit einem PayPal Bezahl-Link</li>
+        <li>Sie erhalten sofort eine E-Mail mit einem PayPal Bezahl-Link</li>
         <li>Es kann einige Minuten dauern, bis die Reservierung hier Online sichtbar wird</li>
         <li>Die Rechnung wird Ihnen umgegehend nach der Online Beratung zugestellt</li>
     </ul> 
@@ -169,7 +169,7 @@ dynamicButton.disabled = true;
         var emailValue = emailElem.value;
         if (emailValue == '') {
             emailElem.style.borderColor = 'red';
-            alert('Bitte geben Sie zuerst Ihre EMail Adresse an!');
+            alert('Bitte geben Sie zuerst Ihre E-Mail Adresse an!');
             return;
         }
         const validateEmail = (emailValue) => {
@@ -181,11 +181,11 @@ dynamicButton.disabled = true;
         }; 
         if (validateEmail(emailValue) == null) { 
             emailElem.style.borderColor = 'red';     
-            alert('Bitte geben Sie eine korrekte EMail Adresse ein!');
+            alert('Bitte geben Sie eine korrekte E-Mail Adresse ein!');
             return;
         }
 
-        if (confirm('Ihre Daten:\n\nEMail ' + emailValue +  '\nTag ' + reservationDayParam + '\nZeit ' + reservationTimeParam + ' Uhr\nPreis 178,50€ brutto\n\nMöchten Sie jetzt reservieren?') == false) {
+        if (confirm('Ihre Daten:\n\nE-Mail ' + emailValue +  '\nTag ' + reservationDayParam + '\nZeit ' + reservationTimeParam + ' Uhr\nPreis 178,50€ brutto\n\nMöchten Sie jetzt reservieren?') == false) {
             return;
         }
 
