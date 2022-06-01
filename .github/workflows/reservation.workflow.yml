@@ -89,12 +89,12 @@ jobs:
           server_port: 465
           username: ${{secrets.MAIL_USERNAME}}
           password: ${{secrets.MAIL_PASSWORD}}
-          subject: Reservierung für ${{github.event.client_payload.email}} ${{github.event.client_payload.reservationDay}} ${{github.event.client_payload.reservationTime}} Hopf-it.de
+          subject: Reservierung f&uuml;r ${{github.event.client_payload.email}} ${{github.event.client_payload.reservationDay}} ${{github.event.client_payload.reservationTime}} Hopf-it.de
           # Read file contents as body:
           body: file://hopf-it/reservation/reservation-email.html
           to: ${{github.event.client_payload.email}} 
           bcc: ${{secrets.MAIL_ADRESS}}
-          from: Hopf-it.de Live Online Video Beratung
+          from: Hopf-it.de pers&ouml;nliche Online Beratung
           # Optional content type (defaults to text/plain):
           content_type: text/html
           # Optional attachments:

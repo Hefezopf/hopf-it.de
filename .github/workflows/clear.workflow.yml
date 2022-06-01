@@ -57,7 +57,7 @@ jobs:
           # Read file contents as body:
           body: file://hopf-it/reservation/reservation-email.html
           to: ${{secrets.MAIL_ADRESS}}
-          from: Hopf-it.de Live Online Video Beratung
+          from: Hopf-it.de pers&ouml;nliche Online Beratung
           # Optional content type (defaults to text/plain):
           content_type: text/html
           # Optional attachments:
