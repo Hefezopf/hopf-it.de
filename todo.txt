@@ -4,6 +4,9 @@ TODO.txt
 markus@hopf-it.de
 
 
+./minify_index_html.sh
+
+
 -Deutsch (Englisch)
 
 
