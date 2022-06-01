@@ -1,9 +1,8 @@
 TODO.txt
 ########
 
+For easy copy reasons:
 markus@hopf-it.de
-
-
 ./minify_index_html.sh
 
 
@@ -13,4 +12,4 @@ markus@hopf-it.de
 -WF für Urlaub / block
 
 
--Rechtliche hinweise?
+-Rechtliche Hinweise?
