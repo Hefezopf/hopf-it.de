@@ -3,15 +3,49 @@ Ablauf Online Beratung:
 
 Beschreibung wie der Ablauf nach der Bezahlung per PayPal:
 ---------------------------------------------------------
--Im Google Kalender GoogleMeet Link generieren (leider ist hier die markus.hopf08@googlemail.com Adresse)
+-Im Google Kalender Google Meet Link generieren (leider ist hier die markus.hopf08@googlemail.com Adresse)
 oder 
--GoogleMeet Link generieren mit http://meet.google.com/new (leider ist hier die markus.hopf08@googlemail.com Adresse)
+-Google Meet Link generieren mit http://meet.google.com/new (leider ist hier die markus.hopf08@googlemail.com Adresse)
 
 -E-Mail mit Link schreiben und versenden
 oder
 -Teilnehmer E-Mail direkt aus dem Kalender heraus hinzufügen
 
--Rechung schreiben
+
+Sehr verehrter Beratungs Kunde,
+
+dies ist Ihre Einladungs E-Mail von Hopf-it.de zur persönlichen Online Beratung mit Markus Hopf.
+
+Ihre Bezahlung und Ihr Termin sind bestätigt!
+
+1 Stunde persönliche Online Beratung mit Markus Hopf
+150 € netto (178,50 € brutto inkl. 19%)
+
+Hier ist Ihr Google Meet Link:
+
+Donnerstag
+17:00 - 18:00 Uhr
+LINK
+
+Ich freue mich auf das persönliche Gespräch mit Ihnen.
+
+Die Rechnung wird Ihnen umgehend nach der persönlichen Online Beratung zugestellt.
+
+Viele Grüße und bis dann...
+Markus Hopf
+___________________________
+Markus Hopf
+Dipl.-Ing. Technische Informatik (FH)
+System- und Unternehmensberatung
+Klara-Ziegler-Bogen 53
+D-81739 München
+Mobil Tel: +491729594590
+E-Mail: info@hopf-it.de
+Internet: https://www.hopf-it.de
+Umsatzsteuer-ID:DE 200195420
+
+
+-Rechnung schreiben
 
 -Rechnung versenden
 
