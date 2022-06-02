@@ -6,6 +6,11 @@ markus@hopf-it.de
 ./minify_index_html.sh
 
 
+
+-alert
+https://stackoverflow.com/questions/1905289/how-to-edit-a-javascript-alert-box-title
+
+
 -Deutsch (Englisch)
 
 

@@ -21,10 +21,11 @@
 
 <h3>Ihre E-Mail Adresse</h3>
 <div>
-    <input name='emailId' id='emailId' style='height: 45px;' type='text' maxlength='40' value='' size='40'/>
+    <input name='emailId' id='emailId' style='height: 45px;' type='text' maxlength='40' value='' size='40' onblur='clearError()'/>
+    <br>
+    <span id='errorEmailId' style='color: red; display: none'></span>
 </div>
 
-<br>
 <h3>Verf&uuml;gbare pers&ouml;nliche Online Beratungs Zeiten f&uuml;r diese Woche</h3>
 
 <div style="float: left;">
@@ -78,22 +79,17 @@
     </table>
 </div>
 
-<!-- <table class="tg">
-    <tr>
-        <th class="tg-031e">Montag</th>
-        <th class="tg-031e">Dienstag</th>
-        <th class="tg-031e">Mittwoch</th>
-        <th class="tg-031e">Donnerstag</th>
-        <th class="tg-031e">Freitag</th>
-    </tr>
-    <tr>
-        <td class="tg-031e">17:00 Uhr<br><button id="buttonReservierenId1" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren('buttonReservierenId1', 'Montag', '17:00')">Reservieren</button></td>
-        <td class="tg-031e">17:00 Uhr<br><button id="buttonReservierenId2" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren('buttonReservierenId2', 'Dienstag', '17:00')">Reservieren</button></td>
-        <td class="tg-031e">17:00 Uhr<br><button id="buttonReservierenId3" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren('buttonReservierenId3', 'Mittwoch', '17:00')">Reservieren</button></td>
-        <td class="tg-031e">17:00 Uhr<br><button id="buttonReservierenId4" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren('buttonReservierenId4', 'Donnerstag', '17:00')">Reservieren</button></td>
-        <td class="tg-031e">17:00 Uhr<br><button id="buttonReservierenId5" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren('buttonReservierenId5', 'Freitag', '17:00')">Reservieren</button></td>
-    </tr> 
-</table> -->
+
+<!-- <div style="float: left;">
+    <table class="tg">
+        <tr>
+            <th class="tg-031e">Freitag</th>
+        </tr>
+        <tr>
+            <td class="tg-031e">17:00 Uhr<br><button id="buttonReservierenId6" style='font-size:large; height: 50px; width: 130px;' type="button" onclick="reservieren('buttonReservierenId6', 'Freitag', '17:00')">Reservieren</button></td>
+        </tr> 
+    </table>
+</div> -->
 
 <br>
 <div style="float: left;">
@@ -165,12 +161,26 @@ dynamicButton.disabled = true;
         document.getElementById('buttonReservierenId1').disabled = true;
     }
 
+    function errorMsg(message) {
+        var errorElement = document.getElementById("errorEmailId");
+        errorElement.style.display = '';
+        errorElement.innerHTML = message; 
+    }
+
+    function clearError() {
+        var emailElem = document.getElementById('emailId');
+        emailElem.style.borderColor = '';
+        var errorElement = document.getElementById("errorEmailId");
+        errorElement.style.display = 'none';
+    }
+
     function reservieren(buttonIdParam, reservationDayParam, reservationTimeParam) {
         var emailElem = document.getElementById('emailId');
         var emailValue = emailElem.value;
         if (emailValue == '') {
             emailElem.style.borderColor = 'red';
-            alert('Bitte geben Sie zuerst Ihre E-Mail Adresse an!');
+            window.alert = errorMsg('Bitte geben Sie zuerst Ihre E-Mail Adresse an!');
+           // alert('Bitte geben Sie zuerst Ihre E-Mail Adresse an!');
             return;
         }
         const validateEmail = (emailValue) => {
@@ -181,18 +191,19 @@ dynamicButton.disabled = true;
                 );
         }; 
         if (validateEmail(emailValue) == null) { 
-            emailElem.style.borderColor = 'red';     
-            alert('Bitte geben Sie eine korrekte E-Mail Adresse ein!');
+            emailElem.style.borderColor = 'red'; 
+            window.alert = errorMsg('Bitte geben Sie eine <b>korrekte</b> E-Mail Adresse ein!');    
+           // alert('Bitte geben Sie eine korrekte E-Mail Adresse ein!');
             return;
         }
 
-        if (confirm('Ihre Daten:\n\nE-Mail ' + emailValue +  '\nTag ' + reservationDayParam + '\nZeit ' + reservationTimeParam + ' Uhr\nPreis 178,50€ brutto inkl. 19%\n\nMöchten Sie jetzt reservieren?') == false) {
+        if (confirm('Ihre Reservierungs Daten:\n\nE-Mail ' + emailValue +  '\nTag ' + reservationDayParam + '\nZeit ' + reservationTimeParam + ' Uhr\nPreis 178,50€ brutto inkl. 19%\n\nMöchten Sie jetzt reservieren?') == false) {
             return;
         }
 
         // Disable currently clicked button
         document.getElementById(buttonIdParam).disabled = true;
-        emailElem.style.borderColor = ''; 
+    //    emailElem.style.borderColor = '';
 
         var url = 'https://api.github.com/repos/Hefezopf/hopf-it.de/dispatches';
         var xhr = new XMLHttpRequest();
