@@ -1,3 +1,4 @@
+ErrorDocument 404 https://hopf-it.de
 RewriteEngine On
 RewriteCond %{SERVER_PORT} !=443
 RewriteRule ^(.*)$ https://hopf-it.de/$1 [R=301,L]
