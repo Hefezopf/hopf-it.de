@@ -46,19 +46,19 @@ jobs:
           git commit -am "Github ${{github.event_name}} ${{github.event.action}}" --allow-empty
           git push          
 
-      - name: Send result via email
-        uses: dawidd6/action-send-mail@v2
-        with:
-          server_address: smtp.ionos.de
-          server_port: 465
-          username: ${{secrets.MAIL_USERNAME}}
-          password: ${{secrets.MAIL_PASSWORD}}
-          subject: Clear Reservation Hopf-it.de
-          # Read file contents as body:
-          body: file://hopf-it/reservation/reservation-email.html
-          to: ${{secrets.MAIL_ADRESS}}
-          from: Hopf-it.de persönliche Online Beratung
-          # Optional content type (defaults to text/plain):
-          content_type: text/html
-          # Optional attachments:
-          attachments: hopf-it/images/PayPal.png, hopf-it/images/GoogleMeet.png, hopf-it/images/data/thumbMaxKlein4.jpg
+      # - name: Send result via email
+      #   uses: dawidd6/action-send-mail@v2
+      #   with:
+      #     server_address: smtp.ionos.de
+      #     server_port: 465
+      #     username: ${{secrets.MAIL_USERNAME}}
+      #     password: ${{secrets.MAIL_PASSWORD}}
+      #     subject: Clear Reservation Hopf-it.de
+      #     # Read file contents as body:
+      #     body: file://hopf-it/reservation/reservation-email.html
+      #     to: ${{secrets.MAIL_ADRESS}}
+      #     from: Hopf-it.de persönliche Online Beratung
+      #     # Optional content type (defaults to text/plain):
+      #     content_type: text/html
+      #     # Optional attachments:
+      #     attachments: hopf-it/images/PayPal.png, hopf-it/images/GoogleMeet.png, hopf-it/images/data/thumbMaxKlein4.jpg
