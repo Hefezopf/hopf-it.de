@@ -22,3 +22,7 @@ https://stackoverflow.com/questions/1905289/how-to-edit-a-javascript-alert-box-t
 
 
 -Rechtliche Hinweise?
+
+
+https://github.com/settings/tokens
+
