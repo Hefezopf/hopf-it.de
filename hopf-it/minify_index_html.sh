@@ -9,6 +9,8 @@
 cp index.html index_minified.html
 sed -i "s/^[ \t]*//g" index_minified.html
 
+echo "copy index.html + Profil_Web_Hopf*.pdf to D:/temp"
+
 cp index_minified.html /D/temp/index.html
 cp Profil_Web_Hopf_EN.pdf /D/temp/Profil_Web_Hopf_EN.pdf
 cp Profil_Web_Hopf.pdf /D/temp/Profil_Web_Hopf.pdf
