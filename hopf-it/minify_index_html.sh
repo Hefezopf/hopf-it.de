@@ -7,7 +7,14 @@
 # Call example: ./minify_index_html.sh
 
 cp index.html index_minified.html
+
+echo "minify..."
 sed -i "s/^[ \t]*//g" index_minified.html
+
+echo "genreate pdfs..."
+# https://github.com/yeokm1/docs-to-pdf-converter
+java -jar docs-to-pdf-converter-1.8.jar -input Profil_Hopf.docx -output Profil_Web_Hopf.pdf
+java -jar docs-to-pdf-converter-1.8.jar -input Profil_Hopf_engl.docx -output Profil_Web_Hopf_EN.pdf
 
 echo "copy index.html + Profil_Web_Hopf*.pdf to D:/temp"
 
