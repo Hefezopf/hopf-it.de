@@ -5,6 +5,7 @@ TODO.txt
 attempto habe ich rausgenommen
 
 
+
 For easy copy reasons:
 markus@hopf-it.de
 ./minify_index_html.sh
