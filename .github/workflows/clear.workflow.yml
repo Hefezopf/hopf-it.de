@@ -61,4 +61,4 @@ jobs:
       #     # Optional content type (defaults to text/plain):
       #     content_type: text/html
       #     # Optional attachments:
-      #     attachments: hopf-it/images/PayPal.png, hopf-it/images/GoogleMeet.png, hopf-it/images/data/thumbMaxKlein4.jpg
+      #     attachments: hopf-it/images/PayPal.png, hopf-it/images/GoogleMeet.png, hopf-it/images/data/MarkusHopfThumbnail.jpg
