@@ -2,13 +2,16 @@ TODO.txt
 ########
 
 
-attempto habe ich rausgenommen
+PDFs erzeugen (d:/temp/*.pdf) und index_minified.html (d:/temp/index.html)  erzeugen
+cdhp
+./minify_index_html.sh
 
+
+ftp://home178497801.1and1-data.host/
 
 
 For easy copy reasons:
 markus@hopf-it.de
-./minify_index_html.sh
 
 
 
