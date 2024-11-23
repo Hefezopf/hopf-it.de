@@ -18,7 +18,7 @@ java -jar docs-to-pdf-converter-1.8.jar -input Profil_Hopf_engl.docx -output Pro
 
 echo "copy index.html + Profil_Web_Hopf*.pdf to D:/temp"
 echo "If warnings, close WORD Docs!"
-echo "Upload with WinSCP"
+echo "Now: Upload with WinSCP..."
 
 cp index_minified.html /D/temp/index.html
 cp Profil_Web_Hopf_EN.pdf /D/temp/Profil_Web_Hopf_EN.pdf
