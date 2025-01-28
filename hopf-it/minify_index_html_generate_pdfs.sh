@@ -16,10 +16,10 @@ echo "generate pdfs..."
 java -jar docs-to-pdf-converter-1.8.jar -input Profil_Hopf.docx -output Profil_Web_Hopf.pdf
 java -jar docs-to-pdf-converter-1.8.jar -input Profil_Hopf_engl.docx -output Profil_Web_Hopf_EN.pdf
 
-echo "copy index.html + Profil_Web_Hopf*.pdf to D:/temp"
+echo "copy index.html + Profil_Web_Hopf*.pdf to C:/temp"
 echo "If warnings, close WORD Docs!"
 echo "Now: Upload with WinSCP..."
 
-cp index_minified.html /D/temp/index.html
-cp Profil_Web_Hopf_EN.pdf /D/temp/Profil_Web_Hopf_EN.pdf
-cp Profil_Web_Hopf.pdf /D/temp/Profil_Web_Hopf.pdf
+cp index_minified.html /C/temp/index.html
+cp Profil_Web_Hopf_EN.pdf /C/temp/Profil_Web_Hopf_EN.pdf
+cp Profil_Web_Hopf.pdf /C/temp/Profil_Web_Hopf.pdf
