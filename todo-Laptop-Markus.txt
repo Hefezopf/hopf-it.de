@@ -1,0 +1,24 @@
+TODO.txt
+########
+
+
+PDFs erzeugen (d:/temp/*.pdf) und index_minified.html (d:/temp/index.html)  erzeugen
+cdhp
+./minify_index_html_generate_pdfs.sh
+
+
+ftp://home178497801.1and1-data.host/
+
+
+For easy copy reasons:
+markus@hopf-it.de
+
+
+-alert
+https://stackoverflow.com/questions/1905289/how-to-edit-a-javascript-alert-box-title
+
+
+https://github.com/settings/tokens
+
+
+
