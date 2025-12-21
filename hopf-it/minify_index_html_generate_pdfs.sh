@@ -20,6 +20,9 @@ echo "copy index.html + Profil_Web_Hopf*.pdf to C:/temp"
 echo "If warnings, close WORD Docs!"
 echo "Now: Upload with WinSCP..."
 
-cp index_minified.html /C/temp/index.html
-cp Profil_Web_Hopf_EN.pdf /C/temp/Profil_Web_Hopf_EN.pdf
-cp Profil_Web_Hopf.pdf /C/temp/Profil_Web_Hopf.pdf
+#cp index_minified.html /C/temp/index.html
+cp index_minified.html ~/tmp/index.html
+#cp Profil_Web_Hopf_EN.pdf /C/temp/Profil_Web_Hopf_EN.pdf
+cp Profil_Web_Hopf_EN.pdf ~/tmp/Profil_Web_Hopf_EN.pdf
+#cp Profil_Web_Hopf.pdf /C/temp/Profil_Web_Hopf.pdf
+cp Profil_Web_Hopf.pdf ~/tmp/Profil_Web_Hopf.pdf
