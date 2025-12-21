@@ -2,6 +2,7 @@ TODO.txt
 ########
 
 
+
 PDFs erzeugen (d:/temp/*.pdf) und index_minified.html (d:/temp/index.html)  erzeugen
 cdhp
 ./minify_index_html_generate_pdfs.sh
