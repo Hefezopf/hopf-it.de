@@ -20,3 +20,16 @@ https://stackoverflow.com/questions/1905289/how-to-edit-a-javascript-alert-box-t
 
 
 https://github.com/settings/tokens
+
+
+GEHT NICHT MIT COMMAND 
+!! Token in .bash_profile/.bashrc AND git remote
+git remote -v
+git remote remove origin
+git remote add origin https://ghp_...@github.com/Hefezopf/hopf-it.git
+(git branch --set-upstream-to=origin/master master)
+git push --set-upstream origin master
+
+git reset --hard origin/master
+
+git remote add origin https://github.com/Hefezopf/hopf-it.de.git
