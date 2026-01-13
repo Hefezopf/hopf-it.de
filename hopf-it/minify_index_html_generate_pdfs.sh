@@ -11,3 +11,4 @@ echo "Now: Upload with WinSCP..."
 cp "index_minified.html" ~/tmp/index.html
 cp Profil_Web_Hopf_EN.pdf ~/tmp/Profil_Web_Hopf_EN.pdf
 cp Profil_Web_Hopf.pdf ~/tmp/Profil_Web_Hopf.pdf
+
