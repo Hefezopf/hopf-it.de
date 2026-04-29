@@ -12,9 +12,10 @@ echo "Now: Upload with WinSCP or FileZilla..."
 
 echo "Operating System: $OSTYPE"
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-        # ...
-        echo "TODO: fix"
-        exit 0
+        echo "copy index.html + Profil_Web_Hopf*.pdf to ~/tmp"
+        cp "index_minified.html" ~/tmp/index.html
+        cp Profil_Web_Hopf_EN.pdf ~/tmp/Profil_Web_Hopf_EN.pdf
+        cp Profil_Web_Hopf.pdf ~/tmp/Profil_Web_Hopf.pdf
 elif [[ "$OSTYPE" == "darwin"* ]]; then
         # Mac OSX
         echo "TODO: fix"
