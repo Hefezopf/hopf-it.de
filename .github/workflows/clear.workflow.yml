@@ -17,9 +17,9 @@ on:
         required: false
         default: 'XXX'
 
-  schedule:
+  #schedule:
   # Every saturday
-  - cron: "0 0 * * SAT"
+  #- cron: "0 0 * * SAT"
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
